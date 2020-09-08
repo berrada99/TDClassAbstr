@@ -1,6 +1,6 @@
 package com.company;
 
-public class NainJardin implements Victime{
+public class NainJardin implements Victime {
 
     protected int solidite;
 
