@@ -12,6 +12,9 @@ public class NainJardin implements Victime {
         return this.solidite;
     }
 
+    public String toString() {
+        return "Je suis un nain de jardin et j'ai " + this.getSolidite() + " de solidité";
+    }
     @Override
     public int subitFrappe(int coup) {
 

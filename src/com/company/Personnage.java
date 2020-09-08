@@ -39,7 +39,7 @@ public abstract class Personnage implements Victime {
         }
     }
 
-    public abstract void attaque(Personnage p);
+    public abstract void attaque(Victime v);
 
     public abstract int subitFrappe(int coup);
 

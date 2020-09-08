@@ -8,7 +8,9 @@ public class GnomeJardin extends NainJardin {
         super(solidite);
         this.sort = (int) (Math.random()*this.getSolidite());
     }
-
+    public String toString() {
+        return "Je suis un gnome de jardin et j'ai " + this.getSolidite() + " de solidité";
+    }
     public int getSort() {
         return this.sort;
     }

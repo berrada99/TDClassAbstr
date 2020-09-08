@@ -14,11 +14,11 @@ public class Sorcier extends Personnage {
     }
 
     @Override
-    public void attaque(Personnage p) {
+    public void attaque(Victime v) {
         if (!this.mort()) {
             int coup = (int)((double)this.getVie()*this.getPouvoir());
-            int contrecoup = p.subitCharme(coup);
-            this.subitCharme(-contrecoup);
+            int contrecoup = v.subitCharme(coup);
+            this.addVie(-contrecoup);
         }
     }
 

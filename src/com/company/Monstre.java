@@ -8,11 +8,11 @@ public class Monstre extends Personnage {
     }
 
     @Override
-    public void attaque(Personnage p) {
+    public void attaque(Victime v) {
         if (!this.mort()) {
             int coup = this.getVie();
-            int contrecoup = p.subitFrappe(coup);
-            this.subitFrappe(contrecoup);
+            int contrecoup = v.subitFrappe(coup);
+            this.addVie(-contrecoup);
         }
     }
 

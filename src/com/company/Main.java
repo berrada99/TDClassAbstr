@@ -8,6 +8,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+
+        /*
         int[] pdv = new int[10];
         for (int i = 0; i<10; i++) {
             pdv[i] = (int)(Math.random()*100);
@@ -63,6 +65,7 @@ public class Main {
         joueurs.set(0, n3);
         joueurs.set(0, n4);
         joueurs.set(0, n5);
+        */
 
         /*
         for (int i = 0; i<10; i++) {
@@ -91,6 +94,9 @@ public class Main {
             System.out.println(personnages[i].toString());
         }
         */
+
+        Jeu jeu = new Jeu(5, 5,1,4,2, 10);
+        jeu.jouer();
 
     }
 }
