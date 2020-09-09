@@ -37,6 +37,7 @@ public class Sorcier extends Personnage {
 
     @Override
     public int subitCharme(int coup) {
+        this.addVie(0);
         return 0;
     }
 }

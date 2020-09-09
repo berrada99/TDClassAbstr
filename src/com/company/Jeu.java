@@ -73,7 +73,7 @@ public class Jeu {
         int nbPersonnages = this.getNbPersonnage();
         int k = (int)(Math.random()*nbPersonnages);
         int l = (int)(Math.random()*nbVictimes); //
-        if ( k != l ) {
+        if ( k != l && !((Personnage)listvictime.get(k)).mort()) {
             if (l < this.getNbPersonnage()) {
                 System.out.println(((Personnage) listvictime.get(k)).getNom() + " attaque " + ((Personnage) listvictime.get(l)).getNom());
             } else {
@@ -83,7 +83,7 @@ public class Jeu {
             System.out.println("\n");
             if (k >= this.nbMonstre + this.nbSorcier && l >= this.getNbPersonnage() + this.nbNainJardin) {
                 for (int i = 0 ; i < this.nbMonstre + this.nbSorcier ; i++) {
-                    System.out.println("Cette attaque provoque un clash de magie et affecte tout les personnages non magiques perdent un point de vie");
+                    System.out.println("Cette attaque provoque un clash de magie et affecte tout les personnages non magiques qui perdent un point de vie\n");
                     ((Personnage)listvictime.get(i)).addVie(-1);
                 }
             }

@@ -20,10 +20,10 @@ public class NainJardin implements Victime {
 
         int contrecoup;
         if (this.getSolidite() > coup) {
+            contrecoup = coup;
+        } else {
             contrecoup = this.getSolidite();
             this.solidite = 0;
-        } else {
-            contrecoup = coup;
         }
         return contrecoup;
 

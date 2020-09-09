@@ -32,10 +32,12 @@ public abstract class Personnage implements Victime {
 
     public void addVie(int num) {
         this.pdv += num;
-        if (num >= 0) {
+        if (num > 0) {
             System.out.println(this.getNom() + " gagne " + num + " points de vie.");
-        } else {
+        } else if (num < 0) {
             System.out.println(this.getNom() + " perds " + num + " points de vie.");
+        } else {
+            System.out.println(this.getNom() + " n'est pas affecté.");
         }
     }
 
